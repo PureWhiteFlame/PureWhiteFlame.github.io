@@ -5,13 +5,13 @@
 <meta property="og:site_name" content="WhiteFlame">
 <meta property="og:description" content="今天做了ctf.show开展的DJBCTF，题量很大，题的难度也大。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://blog.flame8.xyz/2021/01/23/DJBCTF01/.%5Cimage-20210123170139751.png">
+<meta property="og:image" content="https://blog.flame8.xyz/images/pic/image-20210123170139751.png">
 <meta property="article:published_time" content="2021-01-23T08:52:20.000Z">
-<meta property="article:modified_time" content="2021-01-24T13:13:36.785Z">
+<meta property="article:modified_time" content="2021-01-24T14:09:01.190Z">
 <meta property="article:author" content="WhiteFlame">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.flame8.xyz/2021/01/23/DJBCTF01/.%5Cimage-20210123170139751.png"><title>DJBCTF01 1道RE 1道WEB 1道签到 | WhiteFlame</title><link ref="canonical" href="https://blog.flame8.xyz/2021/01/23/DJBCTF01/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.1"><script>var Stun = window.Stun || {};
+<meta name="twitter:image" content="https://blog.flame8.xyz/images/pic/image-20210123170139751.png"><title>DJBCTF01 1道RE 1道WEB 1道签到 | WhiteFlame</title><link ref="canonical" href="https://blog.flame8.xyz/2021/01/23/DJBCTF01/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.1"><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/',
   algolia: undefined,
@@ -53,7 +53,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"></he
 <p>先后判断scheme、host、secret是否满足要求，再对secret进行处理与ans比对。如果比对成功，就调用check函数获取提示。</p>
 <p>首先反向运算ans得到secret：Android_scheme_is_FUN</p>
 <p>再拼接字符串访问该App，即可获得下列提示：</p>
-<p><img src=".%5Cimage-20210123170139751.png" alt="image-20210123170139751"></p>
+<p><img src="/images/pic/image-20210123170139751.png" alt="image-20210123170139751"></p>
 <p>按照提示再次拼接字符串得到flag</p>
 
         <h1 id="WEB"   >
